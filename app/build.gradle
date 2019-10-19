@@ -1,0 +1,59 @@
+apply plugin: 'com.android.application'
+
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+def keyfile = file(properties.getProperty("keystore.path"))
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.liming.batteryinfo"
+        minSdkVersion 21
+        targetSdkVersion 26
+        versionCode 18
+        versionName "3.5"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    // 这个是解决lint报错的代码
+    lintOptions {
+        abortOnError false
+    }
+
+    signingConfigs {
+        myConfig {
+            storeFile keyfile
+            keyAlias properties.getProperty("keystore.alias")
+            storePassword properties.getProperty("keystore.alias_password")
+            keyPassword properties.getProperty("keystore.password")
+            println("====== signingConfigs.release ======")
+        }
+
+    }
+
+    buildTypes {
+        debug {
+            println("====== buildTypes.debug ======")
+            println("WITH -> buildTypes -> release: using jks key")
+            if (keyfile.exists()) {
+                println("WITH -> buildTypes -> release: using jks key")
+                signingConfig signingConfigs.myConfig
+            } else {
+                println("WITH -> buildTypes -> release: using default key")
+            }
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            if (keyfile.exists()) {
+                println("WITH -> buildTypes -> release: using jks key")
+                signingConfig signingConfigs.myConfig
+            } else {
+                println("WITH -> buildTypes -> release: using default key")
+            }
+        }
+    }
+
+}
+
+dependencies {
+}
