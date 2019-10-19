@@ -120,9 +120,9 @@ public class CurrentWindowService extends Service {
                 hints[hints.length - 1] = SystemClock.uptimeMillis();
                 if (SystemClock.uptimeMillis() - hints[0] >= 700) {
                     Log.i(TAG, "要执行");
-                    Toast.makeText(CurrentWindowService.this, "连续点击两次以退出", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(CurrentWindowService.this, "Click twice in a row to exit", Toast.LENGTH_SHORT).show();
                 } else {
-                    Log.i(TAG, "即将关闭");
+                    Log.i(TAG, "Coming soon");
                     stopSelf();
                 }
             }

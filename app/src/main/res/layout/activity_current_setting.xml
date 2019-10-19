@@ -21,7 +21,7 @@
             android:layout_gravity="center_vertical"
             android:background="@android:color/transparent"
             android:gravity="center"
-            android:hint="输入电流(mA)"
+            android:hint="Input Current(mA)"
             android:maxLength="4"
             android:numeric="integer"
             android:singleLine="true" />
@@ -33,7 +33,7 @@
             android:layout_marginTop="20dp"
             android:gravity="center"
             android:padding="5dp"
-            android:text="实验性功能，谨慎操作"
+            android:text="Experimental function, careful operation"
             android:textColor="@color/app_color_theme_1" />
     </LinearLayout>
 
@@ -50,7 +50,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/btn_left_background"
-            android:text="取消"
+            android:text="Cancel"
             android:textColor="#FFFFFFFF" />
 
         <Button
@@ -59,7 +59,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/btn_right_background"
-            android:text="确定"
+            android:text="Submit"
             android:textColor="#FFFFFFFF" />
     </LinearLayout>
 </LinearLayout>

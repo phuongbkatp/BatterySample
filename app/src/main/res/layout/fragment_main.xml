@@ -53,7 +53,7 @@
                             android:layout_centerHorizontal="true"
                             android:layout_centerVertical="true"
                             android:gravity="center|bottom"
-                            android:text="未知机型"
+                            android:text="Unknown model"
                             android:textColor="@color/config_color_white"
                             android:textSize="25dp" />
 
@@ -64,7 +64,7 @@
                             android:layout_below="@id/device_name"
                             android:layout_centerHorizontal="true"
                             android:gravity="center"
-                            android:text="你的机型"
+                            android:text="Your model"
                             android:textColor="@color/config_color_white"
                             android:textSize="11dp" />
                     </RelativeLayout>
@@ -84,7 +84,7 @@
                             android:layout_centerHorizontal="true"
                             android:layout_centerVertical="true"
                             android:gravity="center|bottom"
-                            android:text="正在测量电流"
+                            android:text="Measuring current"
                             android:textColor="@color/config_color_white"
                             android:textSize="25dp" />
 
@@ -95,7 +95,7 @@
                             android:layout_below="@id/battery_current"
                             android:layout_centerHorizontal="true"
                             android:gravity="center"
-                            android:text="正在放电"
+                            android:text="Discharging"
                             android:textColor="@color/config_color_white"
                             android:textSize="11dp" />
                     </RelativeLayout>
@@ -120,7 +120,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:gravity="center|center_vertical"
-                                android:text="设计容量：3300mA"
+                                android:text="Design capacity：3300mA"
                                 android:textColor="@color/config_color_white"
                                 android:textSize="11dp" />
 
@@ -130,7 +130,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:gravity="center|center_vertical"
-                                android:text="限定容量：3200mA"
+                                android:text="Limited capacity：3200mA"
                                 android:textColor="@color/config_color_white"
                                 android:textSize="11dp" />
                         </LinearLayout>
@@ -165,7 +165,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="电池工艺"
+                        android:text="Battery process"
                         android:textColor="@color/config_color_gray_6"
                         android:textSize="14dp" />
 
@@ -173,7 +173,7 @@
                         android:id="@+id/tv_technology"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="未知"
+                        android:text="Unknown"
                         android:textColor="@color/config_color_gray_6"
                         android:textSize="12dp" />
                 </LinearLayout>
@@ -197,7 +197,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="循环次数"
+                        android:text="Cycles"
                         android:textColor="@color/config_color_gray_6"
                         android:textSize="14dp" />
 
@@ -205,7 +205,7 @@
                         android:id="@+id/tv_charge_count"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="0次"
+                        android:text="0 times"
                         android:textColor="@color/config_color_gray_6"
                         android:textSize="12dp" />
                 </LinearLayout>
@@ -229,7 +229,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="电池状态"
+                        android:text="Battery status"
                         android:textColor="@color/config_color_gray_6"
                         android:textSize="14dp" />
 
@@ -237,7 +237,7 @@
                         android:id="@+id/tv_health"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="健康"
+                        android:text="Health"
                         android:textColor="@color/config_color_gray_6"
                         android:textSize="12dp" />
                 </LinearLayout>
@@ -302,7 +302,7 @@
                             android:id="@+id/temptip"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="温度"
+                            android:text="Temperature"
                             android:textColor="#cccccc"
                             android:textSize="16dp" />
 
@@ -321,7 +321,7 @@
                             android:layout_height="wrap_content"
                             android:layout_above="@+id/voltage"
                             android:gravity="bottom"
-                            android:text="电压"
+                            android:text="Voltage"
                             android:textColor="#cccccc"
                             android:textSize="16dp" />
 
@@ -396,7 +396,7 @@
                         android:layout_marginStart="27dp"
                         android:layout_weight="2"
                         android:gravity="center"
-                        android:text="电池健康程度(仅供参考)"
+                        android:text="Battery health (for reference only)"
                         android:textColor="@color/config_color_gray_7"
                         android:textSize="15dp" />
 
@@ -409,7 +409,7 @@
                         android:layout_alignBottom="@id/tv_health_num"
                         android:layout_weight="2"
                         android:gravity="center"
-                        android:text="数据不准确？点击进行电量校准"
+                        android:text="The data is not accurate? Click to perform battery calibration"
                         android:textColor="@color/config_color_gray_8"
                         android:textSize="10dp" />
 
@@ -449,7 +449,7 @@
                         android:layout_marginStart="27dp"
                         android:layout_weight="2"
                         android:gravity="center"
-                        android:text="电量伪装（修改电量）"
+                        android:text="Power camouflage (modify power) "
                         android:textColor="@color/config_color_gray_7"
                         android:textSize="15dp" />
 
@@ -462,7 +462,7 @@
                         android:layout_alignBottom="@id/tv_battery_change_num"
                         android:layout_weight="2"
                         android:gravity="center"
-                        android:text="我手机真没电了！不信你看"
+                        android:text="My phone is really out of power! Do not believe you see"
                         android:textColor="@color/config_color_gray_8"
                         android:textSize="10dp" />
 
@@ -502,7 +502,7 @@
                         android:layout_marginStart="27dp"
                         android:layout_weight="2"
                         android:gravity="center"
-                        android:text="电流悬浮窗"
+                        android:text="Current floating window"
                         android:textColor="@color/config_color_gray_7"
                         android:textSize="15dp" />
 
@@ -514,7 +514,7 @@
                         android:layout_alignLeft="@id/tv_current_windown"
                         android:layout_weight="2"
                         android:gravity="center"
-                        android:text="开启电流悬浮窗 随时随地查看电流"
+                        android:text="Open the current floating window and view the current anytime, anywhere."
                         android:textColor="@color/config_color_gray_8"
                         android:textSize="10dp" />
 

@@ -21,7 +21,7 @@
             android:layout_gravity="center_vertical"
             android:background="@android:color/transparent"
             android:gravity="center"
-            android:hint="输入电量"
+            android:hint="Input battery"
             android:maxLength="3"
             android:numeric="integer"
             android:singleLine="true" />
@@ -40,7 +40,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:padding="5dp"
-            android:text="该功能需要root权限"
+            android:text="This feature requires root privileges"
             android:textColor="@color/app_color_theme_1" />
 
         <TextView
@@ -48,7 +48,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:padding="5dp"
-            android:text="默认电量低于60%恢复充电"
+            android:text="The default battery is less than 60% to restore charging"
             android:textColor="@color/app_color_theme_6" />
     </LinearLayout>
 
@@ -65,7 +65,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/btn_left_background"
-            android:text="恢复充电"
+            android:text="Cancel"
             android:textColor="#FFFFFFFF" />
 
         <Button
@@ -74,7 +74,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/btn_right_background"
-            android:text="确定"
+            android:text="Submit"
             android:textColor="#FFFFFFFF" />
     </LinearLayout>
 </LinearLayout>

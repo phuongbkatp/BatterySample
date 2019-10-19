@@ -14,7 +14,7 @@
         android:layout_marginStart="27dp"
         android:layout_weight="2"
         android:gravity="center"
-        android:text="电池健康程度"
+        android:text="Battery health"
         android:textColor="@color/config_color_gray_7"
         android:textSize="15dp" />
 

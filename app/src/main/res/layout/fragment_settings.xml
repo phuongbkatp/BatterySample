@@ -41,7 +41,7 @@
                 android:paddingTop="2dp"
                 android:paddingRight="8dp"
                 android:paddingBottom="2dp"
-                android:text="电箱 V1.0.6"
+                android:text="Battery Charging V1.0.6"
                 android:textColor="@color/config_color_white"
                 android:textSize="16sp" />
         </LinearLayout>
@@ -153,7 +153,7 @@
                 android:layout_centerVertical="true"
                 android:layout_toRightOf="@id/update_image"
                 android:singleLine="true"
-                android:text="更新日志"
+                android:text="Update log"
                 android:textColor="@color/config_color_gray_2"
                 android:textSize="14sp" />
 
@@ -197,7 +197,7 @@
                 android:layout_centerVertical="true"
                 android:layout_toRightOf="@id/setting_image"
                 android:singleLine="true"
-                android:text="启动动画"
+                android:text="Start animation"
                 android:textColor="@color/config_color_gray_2"
                 android:textSize="14sp" />
 
@@ -242,7 +242,7 @@
                 android:layout_centerVertical="true"
                 android:layout_toRightOf="@id/theme_image"
                 android:singleLine="true"
-                android:text="主题颜色"
+                android:text="Theme color"
                 android:textColor="@color/config_color_gray_2"
                 android:textSize="14sp" />
 
@@ -287,7 +287,7 @@
                 android:layout_centerVertical="true"
                 android:layout_toRightOf="@id/feedback_image"
                 android:singleLine="true"
-                android:text="交流反馈"
+                android:text="Communication feedback"
                 android:textColor="@color/config_color_gray_2"
                 android:textSize="14sp" />
 
@@ -330,7 +330,7 @@
                 android:layout_centerVertical="true"
                 android:layout_toRightOf="@id/donate_image"
                 android:singleLine="true"
-                android:text="支持作者"
+                android:text="Support author"
                 android:textColor="@color/config_color_gray_2"
                 android:textSize="14sp" />
 
@@ -372,7 +372,7 @@
                 android:layout_centerVertical="true"
                 android:layout_toRightOf="@id/about_image"
                 android:singleLine="true"
-                android:text="关于我们"
+                android:text="About us"
                 android:textColor="@color/config_color_gray_2"
                 android:textSize="14sp" />
 
@@ -413,7 +413,7 @@
                 android:layout_centerVertical="true"
                 android:layout_toRightOf="@id/thank_image"
                 android:singleLine="true"
-                android:text="软件致谢"
+                android:text="Thanks"
                 android:textColor="@color/config_color_gray_2"
                 android:textSize="14sp" />
 

@@ -72,7 +72,7 @@ public class SettingsFragment extends BaseFragment implements View.OnClickListen
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_settings, container, false);
         AnnotateUtils.bindView(view);
-        versoin.setText("电箱 V" + BuildConfig.VERSION_NAME);
+        versoin.setText("Battery Charging V" + BuildConfig.VERSION_NAME);
         initView();
         return view;
     }
@@ -122,7 +122,7 @@ public class SettingsFragment extends BaseFragment implements View.OnClickListen
                 break;
 
             case R.id.about_item:
-                Toast.makeText(getActivity(), "白羊唐黎明 出品", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Techmaxx", Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.theme_item:
@@ -133,7 +133,7 @@ public class SettingsFragment extends BaseFragment implements View.OnClickListen
                 try {
                     startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("alipayqr://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=" + "https://qr.alipay.com/aex02181nvk2ld7ktftkj6d" + "%3F_s%3Dweb-other&_t=" + System.currentTimeMillis())));
                 } catch (Exception e) {
-                    Toast.makeText(view.getContext(), "启动支付宝失败", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(view.getContext(), "Start Alipay failed", Toast.LENGTH_SHORT).show();
                 }
                 break;
 
@@ -141,7 +141,7 @@ public class SettingsFragment extends BaseFragment implements View.OnClickListen
                 try {
                     startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("mqqapi://card/show_pslcard?src_type=internal&source=sharecard&version=1&uin=2862102898")));
                 } catch (Exception e) {
-                    Toast.makeText(view.getContext(), "启动QQ失败", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(view.getContext(), "Start QQ failed", Toast.LENGTH_SHORT).show();
                 }
                 break;
             case R.id.setting_switch:
@@ -149,11 +149,11 @@ public class SettingsFragment extends BaseFragment implements View.OnClickListen
                 boolean checked = !(Boolean) getParam("splash", true);
                 setParam("splash", checked);
                 splashSwitch.setChecked(checked);
-                Toast.makeText(getActivity(), "开机动画：" + (checked ? "开" : "关"), Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Boot animation：" + (checked ? "Open" : "Closed"), Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.thank_item:
-                Toast.makeText(getActivity(), "感谢酷安全体小伙伴支持", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Thanks for the cool security partner support", Toast.LENGTH_SHORT).show();
                 break;
         }
     }

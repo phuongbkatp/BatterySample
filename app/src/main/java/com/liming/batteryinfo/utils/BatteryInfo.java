@@ -122,23 +122,23 @@ public class BatteryInfo {
 
     public  String getHealth() {
 
-        String healthName = "未知状态";
+        String healthName = "Unknown state";
 
         switch (health){
             case BATTERY_HEALTH_COLD:
-                healthName = "温度过低";
+                healthName = "Temperature is too low";
                 break;
             case BATTERY_HEALTH_DEAD:
-                healthName = "报废状态";
+                healthName = "Scrap status";
                 break;
             case BATTERY_HEALTH_GOOD:
-                healthName = "电池良好";
+                healthName = "Good battery";
                 break;
             case BATTERY_HEALTH_OVERHEAT:
-                healthName = "电池过热";
+                healthName = "Battery overheating";
                 break;
             case BATTERY_HEALTH_OVER_VOLTAGE:
-                healthName = "电压过高";
+                healthName = "High voltage";
                 break;
         }
 

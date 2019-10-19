@@ -40,10 +40,10 @@ public class BatterySettingActivity extends BaseActivity implements View.OnClick
             case R.id.btn_resert:
                 ShellUtils.execCmd("dumpsys battery reset\ndumpsys batterymanager reset\n",true);
                 if (this.result != -1) {
-                    Toast.makeText(this, "重置成功", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Reset successfully", Toast.LENGTH_SHORT).show();
                     return;
                 } else {
-                    Toast.makeText(this, "重置失败", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Reset failed", Toast.LENGTH_SHORT).show();
                     return;
                 }
             case R.id.btn_submit:
@@ -82,10 +82,10 @@ public class BatterySettingActivity extends BaseActivity implements View.OnClick
                 }
                 this.result = ShellUtils.execCmd(shell.toString(),true).result;
                 if (this.result != -1) {
-                    Toast.makeText(this, "修改成功", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Successfully modified", Toast.LENGTH_SHORT).show();
                     return;
                 } else {
-                    Toast.makeText(this, "修改失败", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Fail to modify", Toast.LENGTH_SHORT).show();
                     return;
                 }
             default:
@@ -98,9 +98,9 @@ public class BatterySettingActivity extends BaseActivity implements View.OnClick
         setContentView(R.layout.activity_battery_setting);
         this.btn_reset.setOnClickListener(this);
         this.btn_submit.setOnClickListener(this);
-        this.battery_type.setAdapter(new ArrayAdapter(this, R.layout.simple_spinner_item, new String[]{"未在充电", "交流充电", "USB充电", "无线充电"}));
+        this.battery_type.setAdapter(new ArrayAdapter(this, R.layout.simple_spinner_item, new String[]{"Not charging", "AC charging", "USB charging", "Wireless charging"}));
         if (Integer.valueOf(registerReceiver(null, new IntentFilter("android.intent.action.BATTERY_CHANGED")).getIntExtra("level", -1)).intValue() < 10) {
-            this.tip.setText("电量少于10%，谨慎操作");
+            this.tip.setText("Less than 10% battery, carefully operated");
             this.tip.setVisibility(View.VISIBLE);
         }
     }
@@ -110,7 +110,7 @@ public class BatterySettingActivity extends BaseActivity implements View.OnClick
         if (charSequence.toString().isEmpty()) {
             this.tip.setVisibility(View.GONE);
         } else if (Integer.parseInt(charSequence.toString()) == 0) {
-            this.tip.setText("电量设置成零，可能会立即关机");
+            this.tip.setText("The battery is set to zero and may shut down immediately.");
             this.tip.setVisibility(View.VISIBLE);
         } else {
             this.tip.setVisibility(View.GONE);

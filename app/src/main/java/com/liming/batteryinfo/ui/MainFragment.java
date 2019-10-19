@@ -200,9 +200,9 @@ public class MainFragment extends BaseFragment implements View.OnClickListener {
 
         //上部分
         batteryCurrent.setText(batteryInfo.getCurrent() + "mA");//当前电流
-        batteryCurrenttip.setText(batteryInfo.isCharging() ? "正在充电" : "正在放电");
-        sjbattery.setText("设计容量：" + batteryInfo.getBatteryCapacity(getActivity()) + " mAh");
-        xdbattery.setText("实际容量：" + (batteryInfo.getChargeFull() / 1000) + " mAh");
+        batteryCurrenttip.setText(batteryInfo.isCharging() ? "Charging" : "Discharging");
+        sjbattery.setText("Design capacity：" + batteryInfo.getBatteryCapacity(getActivity()) + " mAh");
+        xdbattery.setText("Actual capacity：" + (batteryInfo.getChargeFull() / 1000) + " mAh");
 
         //中间部分
         if (batteryInfo.getChargeFull() != 0 && batteryInfo.getChargeCounter() != 0) {
@@ -217,7 +217,7 @@ public class MainFragment extends BaseFragment implements View.OnClickListener {
         voltage.setText((batteryInfo.getVoltage() / 1000d) + "V");
 
         tvTechnology.setText(batteryInfo.getTechnology());//电池工艺
-        tvChargeCount.setText(batteryInfo.getCycleCount() + " 次");
+        tvChargeCount.setText(batteryInfo.getCycleCount() + " Times");
         tvHealth.setText(batteryInfo.getHealth());
 
         //工具部分
@@ -252,12 +252,12 @@ public class MainFragment extends BaseFragment implements View.OnClickListener {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && !Settings.canDrawOverlays(getActivity())) {
             //若没有权限，提示获取.
             Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION);
-            Toast.makeText(getActivity(), "需要取得权限以使用悬浮窗", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "Need permission to use floating window", Toast.LENGTH_SHORT).show();
             startActivity(intent);
 
         } else {
             Intent intent = new Intent(getActivity(), CurrentWindowService.class);
-            Toast.makeText(getActivity(), "已开启电流悬浮窗", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "Current floating window", Toast.LENGTH_SHORT).show();
             getActivity().startService(intent);
         }
     }
@@ -274,19 +274,19 @@ public class MainFragment extends BaseFragment implements View.OnClickListener {
                 showCurrentWindown();
                 break;
             case R.id.rl_health_item:
-                new AlertDialog.Builder(getActivity()).setTitle("温馨提示")//设置对话框标题
-                        .setMessage("确定要清除电池信息吗？清除成功后会自动重启！")//设置显示的内容
-                        .setPositiveButton("确定", new DialogInterface.OnClickListener() {//添加确定按钮
+                new AlertDialog.Builder(getActivity()).setTitle("Tips")//设置对话框标题
+                        .setMessage("Are you sure you want to clear the battery information? After the cleanup is successful, it will restart automatically!")//设置显示的内容
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {//添加确定按钮
                             @Override
                             public void onClick(DialogInterface dialog, int which) {//确定按钮的响应事件
                                 if (ShellUtils.execCmd("rm -f /data/system/batterystats-checkin.bin;rm -f /data/system/batterystats-daily.xml;rm -f /data/system/batterystats.bin;reboot;\n", true).result != -1) {
-                                    Toast.makeText(getActivity(), "清空电池信息成功", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getActivity(), "Clear battery information successfully", Toast.LENGTH_SHORT).show();
                                 } else {
-                                    Toast.makeText(getActivity(), "清空电池信息失败", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getActivity(),"Failed to clear battery information", Toast.LENGTH_SHORT).show();
                                 }
 
                             }
-                        }).setNegativeButton("取消", null).show();//在按键响应事件中显示此对话框
+                        }).setNegativeButton("Cancel", null).show();//在按键响应事件中显示此对话框
 
                 break;
 

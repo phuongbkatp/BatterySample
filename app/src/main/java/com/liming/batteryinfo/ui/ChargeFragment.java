@@ -111,7 +111,7 @@ public class ChargeFragment extends BaseFragment implements View.OnClickListener
         tvVoltage.setText(String.format("%.2f", (batteryInfo.getVoltage() / 1000d)) + "V");
         tvCapacityNow.setText((batteryInfo.getChargeCounter() / 1000) + "mA");
         Integer capacityFull = (Integer) getParam("capacityFull", 0);
-        tvCapacityFull.setText(capacityFull == 0 ? "请满充电" : (capacityFull + "mA"));
+        tvCapacityFull.setText(capacityFull == 0 ? "Please fully charge" : (capacityFull + "mA"));
 
 
         if (batteryInfo.getQuantity() == 100) {
@@ -122,16 +122,17 @@ public class ChargeFragment extends BaseFragment implements View.OnClickListener
         tvElectricityNum.setText(batteryInfo.getQuantity()+"%");
 
         if (capacityFull > 0 && batteryInfo.isCharging()){
-            tvElectricity.setText("预计"+((capacityFull*1000 - batteryInfo.getChargeCounter())/batteryInfo.getCurrent()/60)+"分钟后充满");
+            tvElectricity.setText("Expected"+((capacityFull*1000 - batteryInfo.getChargeCounter())/batteryInfo.getCurrent()/60)+" Learn to pronounce\n" +
+                    "Filled in minutes");
         }else if (capacityFull == 0 && batteryInfo.isCharging()){
-            tvElectricity.setText("循环充电一次后可可计算充电速度");
+            tvElectricity.setText("Cocoa calculates charging speed after cyclic charging");
         }else {
-            tvElectricity.setText("预计可使用"+(batteryInfo.getChargeCounter()/batteryInfo.getCurrent()/60)+"分钟");
+            tvElectricity.setText("Expected to be used"+(batteryInfo.getChargeCounter()/batteryInfo.getCurrent()/60)+"minute");
         }
 
 
 
-        tvMaxCurrent.setText("最大充电电流"+(batteryInfo.getChargeCurrentMax() / 1000)+"mA");
+        tvMaxCurrent.setText("Maximum charging current"+(batteryInfo.getChargeCurrentMax() / 1000)+"mA");
 
         //一秒更新一次
         mTimeHandler.sendEmptyMessageDelayed(SETVIEWDATA, 1000);

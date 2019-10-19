@@ -44,10 +44,10 @@ public class TimeChargeActivity extends BaseActivity implements View.OnClickList
             case R.id.btn_resert:
                 if (ShellUtils.execCmd("if [ -f '/sys/class/power_supply/battery/battery_charging_enabled' ]; then echo 1 > /sys/class/power_supply/battery/battery_charging_enabled; else echo 0 > /sys/class/power_supply/battery/input_suspend; fi;\n",true).result != -1) {
                     setParam("stopnum", 0);
-                    Toast.makeText(TimeChargeActivity.this, "恢复充电成功", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(TimeChargeActivity.this, "Resume charging successfully", Toast.LENGTH_SHORT).show();
                     this.finish();
                 } else {
-                    Toast.makeText(TimeChargeActivity.this, "恢复充电失败，请尝试重启！", Toast.LENGTH_LONG).show();
+                    Toast.makeText(TimeChargeActivity.this, "Recovery failed, please try to restart！", Toast.LENGTH_LONG).show();
                 }
                 break;
             case R.id.btn_submit:
@@ -57,7 +57,7 @@ public class TimeChargeActivity extends BaseActivity implements View.OnClickList
                 }
 
                 if (Integer.valueOf(obj) < 60){
-                    Toast.makeText(TimeChargeActivity.this, "暂时只支持60%以上停止充电", Toast.LENGTH_LONG).show();
+                    Toast.makeText(TimeChargeActivity.this, "Temporarily only support more than 60% stop charging", Toast.LENGTH_LONG).show();
                     return;
                 }
 

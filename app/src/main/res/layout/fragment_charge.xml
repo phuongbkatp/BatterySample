@@ -80,7 +80,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:gravity="center|center_vertical"
-                                android:text="充满容量"
+                                android:text="Full capacity"
                                 android:textColor="@color/config_color_white"
                                 android:textSize="11dp" />
                             <TextView
@@ -108,7 +108,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:gravity="center|center_vertical"
-                                android:text="电池温度"
+                                android:text="Battery temperature"
                                 android:textColor="@color/config_color_white"
                                 android:textSize="11dp" />
                             <TextView
@@ -135,7 +135,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:gravity="center|center_vertical"
-                                android:text="电池电压"
+                                android:text="Battery voltage"
                                 android:textColor="@color/config_color_white"
                                 android:textSize="11dp" />
                             <TextView
@@ -162,7 +162,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:gravity="center|center_vertical"
-                                android:text="当前容量"
+                                android:text="Current capacity"
                                 android:textColor="@color/config_color_white"
                                 android:textSize="11dp" />
                             <TextView
@@ -211,7 +211,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:text="充电提醒"
+                        android:text="Charging reminder"
                         android:textColor="#eeffffff"
                         android:textSize="14dp" />
 
@@ -221,7 +221,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:layout_marginBottom="10dp"
-                        android:text="冲至一定电量后响铃提醒"
+                        android:text="Ring alert after rushing to a certain amount of power"
                         android:textColor="#ccffffff"
                         android:textSize="12dp" />
                 </LinearLayout>
@@ -247,7 +247,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:text="定量停冲"
+                        android:text="Quantitative stop"
                         android:textColor="#eeffffff"
                         android:textSize="14dp" />
 
@@ -257,7 +257,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:layout_marginBottom="10dp"
-                        android:text="定时定量停止充电 防止过充"
+                        android:text="Timed quantitative stop charging to prevent overcharging"
                         android:textColor="#ccffffff"
                         android:textSize="12dp" />
                 </LinearLayout>
@@ -292,7 +292,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:text="智慧充电"
+                        android:text="Smart charging"
                         android:textColor="#eeffffff"
                         android:textSize="14dp" />
 
@@ -302,7 +302,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:layout_marginBottom="10dp"
-                        android:text="冲至指定电量后停止 早晨恢复"
+                        android:text="Stop after the specified amount of electricity, stop in the morning"
                         android:textColor="#ccffffff"
                         android:textSize="12dp" />
                 </LinearLayout>
@@ -339,7 +339,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:layout_marginBottom="10dp"
-                        android:text="预计12分钟后充满"
+                        android:text="Expect to be full after 12 minutes"
                         android:textColor="#ccffffff"
                         android:textSize="12dp" />
                 </LinearLayout>
@@ -374,7 +374,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:text="充电电流"
+                        android:text="Recharging current"
                         android:textColor="#eeffffff"
                         android:textSize="14dp" />
 
@@ -384,7 +384,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:layout_marginBottom="10dp"
-                        android:text="突破充电速度"
+                        android:text="Breaking the charging speed"
                         android:textColor="#ccffffff"
                         android:textSize="12dp" />
                 </LinearLayout>
@@ -410,7 +410,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:text="杂项调整"
+                        android:text="Miscellaneous adjustment"
                         android:textColor="#eeffffff"
                         android:textSize="14dp" />
 
@@ -419,7 +419,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:layout_marginBottom="10dp"
-                        android:text="更多充电自定义选项"
+                        android:text="More charging customization options"
                         android:textColor="#ccffffff"
                         android:textSize="12dp" />
                 </LinearLayout>

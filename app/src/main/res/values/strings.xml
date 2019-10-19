@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">电箱</string>
-    <string name="versoin">当前版本：%1$s</string>
+    <string name="app_name">Battery Charging</string>
+    <string name="versoin">Current version：%1$s</string>
     <string name="update">\n
-        -界面细节修整\n
-        -功能再增加
+        -Update UI\n
+        -Update Features
     </string>
 
     <!-- TODO: Remove or change this placeholder text -->
